@@ -3,8 +3,9 @@
 	"description": "A simple recipe manager",
 	"type": "project",
 	"require": {
-		"php": ">8.1"
-	},
+		"php": ">8.1",
+      	"ext-pdo": "*"
+    },
 	"autoload": {
 		"psr-4": {
 			"App\\": "src/"
