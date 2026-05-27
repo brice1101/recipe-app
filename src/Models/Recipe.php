@@ -185,6 +185,7 @@ ORDER BY i.name");
 
         // Return the new value of cooked
         $row = $db->prepare("SELECT cooked FROM recipes WHERE id = :id");
+        $row->execute([':id' => $id]);
         return (bool) $row->fetchColumn();
     }
 
