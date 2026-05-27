@@ -56,6 +56,14 @@ class Ingredient
      * If an ingredient with the same name already exists, return its ID.
      */
     public static function firstOrCreate(string $name): int {
+
+        $name = trim($name);
+
+        $existing = self::findByName($name);
+        if ($existing) {
+            return (int) $existing['id'];
+        }
+
         $db = Database::getInstance();
         $stmt = $db->prepare("INSERT INTO ingredients (name) VALUES (:name)");
         $stmt->execute([':name' => $name]);
