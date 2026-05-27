@@ -78,7 +78,7 @@ $linked = Recipe::getIngredients($newId);
 count($linked) === 3 ? pass('3 ingredients linked to recipe') : fail('expected 3 ingredients, found ' . count($linked));
 
 section('Recipe::update()');
-$updated = Recipe::update($newId, ['Title' => 'Updated Recipe', 'rating' => 4]);
+$updated = Recipe::update($newId, ['title' => 'Updated Recipe', 'rating' => 4]);
 $updated ? pass('Recipe updated') : fail('Recipe not updated');
 $check = Recipe::find($newId);
 $check['rating'] === 4 ? pass('Rating updated') : fail('Rating not updated');
