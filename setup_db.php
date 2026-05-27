@@ -58,7 +58,7 @@ $recipes = [
         chicken \n5. Cook for 18 minutes \n6. Combine diced tomato, diced cucumber, and remaining
         onion in a bowl with salt and olive oil \n7. Remove the pan from heat and shred cooked
         chicken \n8. Serve curry over rice, with kachumber and coriander to the side.',
-        'rating' => null,
+        'rating' => 4,
         'cooked' => 0,
         'image_path' => null,
     ],
@@ -68,7 +68,7 @@ $recipes = [
         'instructions' => '1. Caramelise red onions in butter. \n2. Combine mustard and mayo in a bowl.
         \n3. Add balsamic vinegar and 2 tbsp sugar to the pan, cook 2-3 mins. \n4. etc.',
         'rating' => null,
-        'cooked' => 0,
+        'cooked' => 1,
         'image_path' => null,
     ],
 ];
