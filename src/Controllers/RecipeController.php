@@ -36,11 +36,22 @@ class RecipeController extends BaseController {
         $this->render('recipes/index', compact('recipes', 'filters'));
     }
 
-    // --------
+    // -------------------------------------------------------------------------
     // GET /recipes/{id}
-    // --------
+    // -------------------------------------------------------------------------
 
-    // Show the new recipe form
+    /** Show a single recipe. */
+    public function show(array $params): void
+    {
+        $recipe = $this->findOrAbort((int) $params['id']);
+        $this->render('recipes/show', compact('recipe'));
+    }
+
+    // -------------------------------------------------------------------------
+    // GET /recipes/create
+    // -------------------------------------------------------------------------
+
+    /** Show the new-recipe form. */
     public function create(): void
     {
         $this->render('recipes/form', [
