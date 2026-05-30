@@ -4,7 +4,9 @@
 	"type": "project",
 	"require": {
 		"php": ">8.1",
-      	"ext-pdo": "*"
+      	"ext-pdo": "*",
+      "ext-fileinfo": "*",
+      "ext-ctype": "*"
     },
 	"autoload": {
 		"psr-4": {
